@@ -13,7 +13,7 @@ You can just simply copy paste this into your header but since luas3x relies on 
 Written by speednextdoor. Modifications are always welcome, just make sure to post it with credits and letting us know! :)
 */
 
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 const char* version = "1.0";
 static bool beta = true;
