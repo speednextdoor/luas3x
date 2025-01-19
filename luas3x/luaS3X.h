@@ -19,7 +19,7 @@ const char* version = "1.0";
 static bool beta = true;
 const char* naming = "luas3x beta";
 
-bool luas3x_engine;
+bool luas3x_engine; 
 
 #define fconv __fastcall
 #define rls DWORD64
@@ -27,13 +27,23 @@ bool luas3x_engine;
 #define addtop
 #define subtop
 
+// thinking of creating an auto updater where you can just auto update from this repo, maybe in the future we can do this 
 class addresses {
 public:
-    DWORD64 lual_checklstring = 0x22ED380;
-    DWORD64 lual_optstring = 0x22ED380;
-    DWORD64 lual_register = 0x22ED380;
-    DWORD64 lual_findtable = 0x22ED380;
+    DWORD64 lual_checklstring = 0;
+    DWORD64 lual_optstring = 0;
+    DWORD64 lual_register = 0;
+    DWORD64 lual_findtable = 0;
+    DWORD64 lual_checkltype = 0x22EA700;
+    DWORD64 lua_typename = 0x22E9300;
+    DWORD64 lua_type = 0x22E91D0;
+    DWORD64 lua_iscfunction = 0x22E9320;
+    DWORD64 lua_auxopen = 0x230D5A0; // lua_pushcfunction, lua_setfield, lua_pushcclosure
+    DWORD64 lua_pushvalue = 0x22E7DD0;
 
+    // additional features, your env already should be having these, but just for the sake of luas3x, it's added.
+    // todo: actually make use of this instead of adding them for no reason
+    DWORD64 luao_nilobject = 0x4172E58;
     addresses() = default;
 };
 
